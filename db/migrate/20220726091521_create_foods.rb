@@ -5,6 +5,7 @@ class CreateFoods < ActiveRecord::Migration[7.0]
       t.string :measurement_unit
       t.integer :price
       t.integer :quantity
+      t.belongs :user, index:true, foreign_key: true
 
       t.timestamps
     end
