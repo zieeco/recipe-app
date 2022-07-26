@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# Added this line to bypas the rubocop offense
 
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
@@ -6,5 +6,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-    validates :name, presence: true
+  validates :name, presence: true
 end

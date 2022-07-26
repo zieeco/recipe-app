@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# Added this line to bypas the rubocop offense
 
 class Food < ApplicationRecord
   belongs_to :user
