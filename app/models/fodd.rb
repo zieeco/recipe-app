@@ -1,0 +1,2 @@
+class Fodd < ApplicationRecord
+end
