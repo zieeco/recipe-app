@@ -30,11 +30,13 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control",  placeholder:" Password Confirmation" %>
   </div>
 
+  <br>
+
   <div class="mb-3" id="sign_links">
     <%= f.submit "Sign up" , class:"btn btn-primary " %>
-
-    <%= render "devise/shared/links" %>
+   
   </div>
+  <%= render "devise/shared/links" %>
   
 <% end %>
 
