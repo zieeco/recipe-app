@@ -1,5 +1,3 @@
-# Added this line to bypas the rubocop offense
-
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -8,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :recipes
   has_many :foods
+  has_many :recipe_foods, through: :recipes
 
   validates :name, presence: true
 end
