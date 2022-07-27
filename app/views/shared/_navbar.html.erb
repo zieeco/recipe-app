@@ -11,9 +11,9 @@
           <%= link_to "All Recipes",  recipes_path, class: "nav-link" %>
         </li>
 
-        <% if user_signed_in? %>
+        <% if current_user %>
         <li class="nav-item">
-          <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-outline-secondary", method: :delete %>
+          <%= link_to "Sign out", destroy_user_session_path(current_user), class: "btn btn-outline-secondary", method: :delete %>
         </li>
         <% else %>
         <li class="nav-item me-2">
