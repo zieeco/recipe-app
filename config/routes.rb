@@ -5,5 +5,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'home#index'
+  
   resources :recipes, except: [:update]
+  resources :recipe_foods
+  resources :foods
+  resources :users
 end
