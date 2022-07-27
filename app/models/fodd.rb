@@ -1,2 +1,0 @@
-class Fodd < ApplicationRecord
-end
