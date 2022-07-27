@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
   get 'recipe/index'
   devise_for :users
@@ -7,5 +5,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'home#index'
-  resources :recipes, :except [:update]
+  resources :recipes, except: [:update]
 end
