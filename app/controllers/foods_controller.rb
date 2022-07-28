@@ -24,7 +24,7 @@ class FoodsController < ApplicationController
     if @food.save
       redirect_to foods_path, notice: 'Your food has been added successfully!'
     else
-      redirect_to new_food_path, notice: 'An error has occurred. Please try again.'
+      redirect_to new_food_path, notice: 'Ops! Something went wrong!'
     end
   end
 
@@ -55,6 +55,6 @@ class FoodsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def food_params
-    params.require(:food).permit(:name, :user_id, :unit, :price)
+    params.require(:food).permit(:name, :user_id, :measurement_unit, :price, :quantity)
   end
 end
