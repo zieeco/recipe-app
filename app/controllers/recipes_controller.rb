@@ -1,7 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: %i[show edit update destroy]
 
-  # GET /recipes or /recipes.json
   def index
     @recipes = Recipe.where(user: current_user)
   end
@@ -25,22 +24,22 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
 
     if @recipe.save
-      redirect_to recipes_path(@recipe), notice: 'Your new recipe has been created successfully!'
+      redirect_to recipes_path(@recipe), notice: 'Your new recipe has been created successfully'
     else
-      redirect_to new_recipe_path, notice: 'An error occured. Please try again.'
+      redirect_to new_recipe_path, notice: 'Ops! something went wrong!'
     end
   end
 
   # PATCH/PUT /recipes/1 or /recipes/1.json
   def update
     @recipe.update(public: !@recipe.public)
-    redirect_to recipe_path(@recipe.id), notice: 'Recipe status updated!'
+    redirect_to recipe_path(@recipe.id), notice: 'Recipe status updated'
   end
 
   # DELETE /recipes/1 or /recipes/1.json
   def destroy
-    @recipe.destroy!
-    redirect_to recipes_path, notice: 'Recipe has been deleted successfully!'
+    @recipe.destroy
+    redirect_to recipes_path, notice: 'Recipe was successfully destroyed.'
   end
 
   private
