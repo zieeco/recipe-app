@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 class CreateFoods < ActiveRecord::Migration[7.0]
   def change
     create_table :foods do |t|
       t.string :name
-      t.string :measurement_unit, default: 0
-      t.integer :price
-      t.integer :quantity
+      t.string :measurement_unit
+      t.integer :price, default: 0
+      t.integer :quantity, default: 0
       t.belongs_to :user, index: true, foreign_key: true
 
       t.timestamps
