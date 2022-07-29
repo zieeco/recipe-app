@@ -5,7 +5,7 @@
 <p class="text-center">Total Number of food items to buy: <span><strong><%= @recipe_foods.length %></strong></span>
 
   Total value of food items needed:
- <span><strong>$<%= @recipe_foods.map {|ingredient| ingredient.food.price * ingredient.quantity }.sum %></strong></span>
+ <span><strong>$<%= @recipe_foods.map {|ingredient| ingredient.food.price * ingredient.food.quantity }.sum %></strong></span>
 </p>
 
 <table class="table table-striped">
@@ -21,7 +21,7 @@
       <tr>
           <td><%= ingredient.food.name %></td>
           <td><%= ingredient.food.quantity %> <%= ingredient.food.measurement_unit %></td>
-          <td><%= ingredient.food.price %></td>
+          <td>$ <%= ingredient.food.price %></td>
       </tr>
     <% end %>
   </tbody>
