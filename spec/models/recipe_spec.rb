@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
-  describe 'Test Recipe model' do 
+  describe 'Test Recipe model' do
     before(:example) do
       @user = User.create(name: 'you', email: 'you@mail.com', password: '1234567')
       @recipe = Recipe.create(user: @user, name: 'meat pie', preparation_time: 5, cooking_time: 20,
@@ -13,7 +13,7 @@ RSpec.describe Recipe, type: :model do
       expect(@recipe).to_not be_valid
     end
 
-     it 'check if preparation time is an integer' do
+    it 'check if preparation time is an integer' do
       @recipe.preparation_time = '1 minute'
       expect(@recipe).to be_valid
     end

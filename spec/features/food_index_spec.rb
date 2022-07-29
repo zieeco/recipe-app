@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "FoodIndices", type: :feature do
+RSpec.feature 'FoodIndices', type: :feature do
   describe 'integration test for food index page' do
     before(:example) do
       @user = User.create(name: 'zieeco', email: 'zieeco@mail.com', password: '1234567')
