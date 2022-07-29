@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog App
+# Recipe App
 
-> This app is a simple app which mimics a real world blog website where users can post comments and see the comments made by other users.
+> This app is a simple recipe application in which a user can order a food recipe of their choice and also get details about their food, price, description of the food and how long it takes to be prepared.
 
 ## Built With
 
@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple example steps.
 - Clone this repository or download the Zip folder:
 
 ~~~ bash
-https://github.com/zieeco/rails-blog-app.git
+https://github.com/zieeco/recipe-app.git
 
 ~~~
 
@@ -63,16 +63,15 @@ npm install
 
 ~~~ bash
 rspec # run all test
-rspec spec/models/user_spec.rb # test for the User model
-rspec spec/models/post_spec.rb # test for the Post model
-rspec spec/models/comment_spec.rb # test for the Comment model
-rspec spec/models/like_spec.rb # test for the Like model
+rspec spec/ # run all tests also
+rspec spec/models/ # test the models
+rspec spec/features/ # run integration test for views
 ~~~
 
 </details>
 
 
-## Authors
+## Author
 
 👤 **zieeco**
 
@@ -80,17 +79,12 @@ rspec spec/models/like_spec.rb # test for the Like model
 - Twitter [@zieecodes](https://twitter.com/zieecodes)
 - LinkedIn: [Isaac Imaobong Samuel](https://www.linkedin.com/in/isaac-imaobong-samuel)
 
-👤 **Ciragane Nicole**
-- GitHub: [@ciraganenicole](https://github.com/ciraganenicole)
-- Twitter: [@CiraganeN](https://twitter.com/CiraganeN)
-- LinkedIn: [CiraganeNicole](https://www.linkedin.com/in/nicole-ciragane-19a3071bb/)
-
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/zieeco/rails-blog-app/issues).
+Feel free to check the [issues page](https://github.com/zieeco/recipe-app/issues).
 
 ## Show your support
 
