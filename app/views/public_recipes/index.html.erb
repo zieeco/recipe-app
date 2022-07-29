@@ -9,12 +9,10 @@
         <h5 class="card-title py-3 "><%= recipe.name.capitalize %></h3>
         <p class="mb-0 py-3">By: <%= current_user.name.capitalize %></p>
       </div>
-        <% @recipes.each do |recipe|%>
           <div class="d-flex w-50 flex-column ">
             <p class="py-3 mb-0">Total food items: <%= recipe.total_foods %></p>
             <p class="py-3 mb-0">Total Price: $ <%= recipe.total_price %></p>
           </div>
-        <%end %>
       <% end %>
     </div>
 </div>
