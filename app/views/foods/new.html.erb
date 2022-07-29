@@ -12,7 +12,8 @@
             </div>
 
             <div class="form-floating mb-3">
-            <%= form.text_field :name, class: "form-control", required: true, placeholder: 'Name of Food' %>
+            <%= form.text_field :name, class: "form-control", required: true, autofocus: true %>
+            <%= form.label :name, "Name of food" %>
             </div>
 
             <div class="form-floating mb-4">
