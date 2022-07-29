@@ -15,18 +15,18 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Name</th>
+      <th scope="col">Food</th>
       <th scope="col">Quantity</th>
-      <th scope="col">Price</th>
-\      <th scope="col">Actions</th>
+      <th scope="col">Value</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
     <tbody>
     <% @ingredients.each do |ingredient|%>
       <tr>
           <td><%= ingredient.food.name %></td>
-          <td><%= ingredient.food.quantity %></td>
-          <td><%= ingredient.food.price %></td>
+          <td><%= ingredient.food.quantity%> <%= ingredient.food.measurement_unit %></td>
+          <td>$ <%= ingredient.food.price %></td>
           <td class="d-flex gap-2">
             <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: ingredient.id) %>
             <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: ingredient.id), method: :delete %>
